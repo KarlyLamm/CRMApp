@@ -5,6 +5,8 @@
  import { createStore } from 'redux';
  import reducers from '../reducers/PeopleReducer'
  import PeopleList from './PeopleList';
+ import Navigation from './Navigation';
+
 
  const store = createStore(reducers);
  
@@ -13,9 +15,7 @@
    render() {
      return (
       <Provider store={store}>
-       <View style={styles.container}>
-         <PeopleList/>
-       </View>
+        <Navigation />
       </Provider>
      );
    }
